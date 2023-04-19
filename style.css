@@ -1,0 +1,344 @@
+@font-face {
+    font-family: "TT Lakes";
+    font-style: normal;
+    font-weight: 400;
+    src: local("TT Lakes"),
+         url("fonts/TTLakes-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    font-style: normal;
+    font-weight: 500;
+    src: local("TT Lakes"),
+         url("fonts/TTLakes-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    font-style: normal;
+    font-weight: 700;
+    src: local("TT Lakes"),
+         url("fonts/TTLakes-Bold.woff") format("woff");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.headerWrap {
+    height: 89px;
+    background-color: #fff;
+    border-bottom: 1px solid #D9FFF5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headerWrap--768 {
+    display: none;
+}
+
+.titleWrap__right {
+    display: none;
+}
+
+.btnIcon {
+    width: 40px;
+    height: 40px;
+    background-color: #FF3E79;
+    border-radius: 20px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.btnLogo {
+    background-color: #fff;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.headerWrap__divider {
+    height: 32px;
+    width: 2px;
+    border-radius: 1px;
+    background: #EAEAEA;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8;
+}
+
+.title {
+    display: flex;
+    padding-top: 24px;
+}
+
+.title__line {
+    width: 8px;
+    height: 40px;
+    background-color: #41F6D7;
+    margin-right: 8px;
+    border-radius: 10px;
+    position: relative;
+    right: 4px;
+}
+
+.title__text {
+    font-family: "TT Lakes", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    color: #1B1C21;
+}
+
+.slideMenu {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    margin-left: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.slideMenu__btn {
+    height: 40px;
+    background-color: #F8F8F8;
+    border: none;
+    font-family: "TT Lakes", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7E7E82;
+    white-space: pre;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.slideMenu__btn:first-child {
+    background-color: #fff;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+}
+
+.aboutUs__text {
+    font-family: "TT Lakes", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #1B1C21;
+    margin: 0;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+.aboutUs__text--768 {
+    display: none;
+}
+
+.aboutUs__text--1120 {
+    display: none;
+}
+
+.readMore {
+    display: flex;
+}
+
+.readMore__rows {
+    margin-left: 24px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.readMore__text {
+    font-family: "TT Lakes", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1B1C21;
+    text-decoration: none;
+}
+
+.cps_img {
+    display: block;
+    margin: 0 auto;
+    padding: 27px 0;
+    max-width: 100%;
+}
+
+@media  screen and (min-width: 768px) {
+    .headerWrap {
+        display: none;
+    }
+
+    .headerWrap--768 {
+        height: 89px;
+        background-color: #fff;
+        border-bottom: 1px solid #D9FFF5;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .headerWrap__left {
+        width: 30%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .headerWrap__burger {
+        margin-left: 24px;
+    }
+
+    .headerWrap__divider {
+        margin-left: 4px;
+        margin-right: 20px;
+    }
+
+    .btnIcon {
+        margin-right: 16px;
+    }
+
+    .headerWrap__serch {
+        margin-right: 24px;
+    }
+
+    .headerWrap__right {
+        width: 70%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .slideMenu {
+        margin-top: 32px;
+        margin-bottom: 40px;
+        margin-left: 24px;
+    }
+
+    .aboutUs__text {
+        display: block;
+        margin-top: 0;
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 48px;
+    }
+
+    .aboutUs__text--768 {
+        display: inline;
+    }
+
+    .readMore__rows {
+        margin-left: 9px;
+    }
+
+    .aboutUs {
+        display: flex;
+        margin: 0 24px;
+        padding-bottom: 40px;
+        align-items: start;
+    }
+
+    .cps_img {
+        min-width: 360px;
+        border-radius: 6px;
+        padding: 0;
+    }
+}
+
+@media  screen and (min-width: 1120px) {
+    .headerWrap--768 {
+        display: none;
+    }
+
+    .titleWrap {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 42px;
+    }
+
+    .title {
+        padding: 0;
+    }
+
+    .title__line {
+        margin-right: 30px;
+    }
+
+    .titleWrap__right {
+        display: flex;
+    }
+
+    .titleWrap__btn {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        background-color: #F8F8F8;
+        border: 0;
+        margin-right: 32px;
+    }
+
+    .btnText {
+        font-family: "TT Lakes", Arial, sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #1B1C21;
+        margin-right: 8px;
+    }
+
+    .btnIcon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .slideMenu {
+        flex-wrap: wrap;
+        margin-top: 8px;
+        margin-left: 32px;
+        margin-bottom: 10px;
+    }
+
+    .aboutUs {
+        margin-left: 34px;
+        margin-right: 28px;
+        padding-bottom: 49px;
+    }
+
+    .aboutUs__wrap {
+        margin-right: 36px;
+        margin-top: 9px;
+    }
+
+    .aboutUs__text--1120 {
+         display: inline;
+    }
+
+    .aboutUs__text {
+        line-height: 20px;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 14px;
+    }
+
+    .cps_img {
+        width: 100%;
+        padding: 0;
+    }
+}
