@@ -77,6 +77,8 @@ main {
     margin: 0;
     padding: 0;
     background-color: #F8F8F8;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .title {
@@ -313,6 +315,7 @@ main {
         margin-top: 8px;
         margin-left: 32px;
         margin-bottom: 10px;
+        overflow: hidden;
     }
 
     .aboutUs {
