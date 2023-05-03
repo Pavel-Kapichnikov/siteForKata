@@ -3,7 +3,7 @@
     font-style: normal;
     font-weight: 400;
     src: local("TT Lakes"),
-         url("fonts/TTLakes-Regular.woff") format("woff");
+         url("assets/fonts/TTLakes-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
     font-style: normal;
     font-weight: 500;
     src: local("TT Lakes"),
-         url("fonts/TTLakes-Medium.woff") format("woff");
+         url("assets/fonts/TTLakes-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
     font-style: normal;
     font-weight: 700;
     src: local("TT Lakes"),
-         url("fonts/TTLakes-Bold.woff") format("woff");
+         url("assets/fonts/TTLakes-Bold.woff") format("woff");
 }
 
 body {
@@ -32,7 +32,7 @@ h1 {
     padding: 0;
 }
 
-.headerWrap {
+.header {
     height: 89px;
     background-color: #fff;
     border-bottom: 1px solid #D9FFF5;
@@ -41,12 +41,32 @@ h1 {
     align-items: center;
 }
 
-.headerWrap--768 {
+.header__actions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header__call, .header__chat, .header__profile {
     display: none;
 }
 
-.titleWrap__right {
-    display: none;
+.header__instrumenal {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.header__instrumenal::before {
+    content: "";
+    display: block;
+    height: 32px;
+    width: 2px;
+    border-radius: 1px;
+    background: #EAEAEA;
+    margin-right: 20px;
+    margin-left: 4px;
 }
 
 .btnIcon {
@@ -59,44 +79,21 @@ h1 {
     padding: 0;
 }
 
-.btnLogo {
+.header_logo {
     background-color: #fff;
     border: 0;
     margin: 0;
     padding: 0;
 }
 
-.headerWrap__divider {
-    height: 32px;
-    width: 2px;
-    border-radius: 1px;
-    background: #EAEAEA;
-}
-
-main {
+.main {
     margin: 0;
     padding: 0;
     background-color: #F8F8F8;
-    max-width: 1280px;
-    margin: 0 auto;
 }
 
-.title {
-    display: flex;
+.services__title {
     padding-top: 24px;
-}
-
-.title__line {
-    width: 8px;
-    height: 40px;
-    background-color: #41F6D7;
-    margin-right: 8px;
-    border-radius: 10px;
-    position: relative;
-    right: 4px;
-}
-
-.title__text {
     font-family: "TT Lakes", Arial, sans-serif;
     font-weight: bold;
     font-size: 28px;
@@ -104,7 +101,23 @@ main {
     color: #1B1C21;
 }
 
-.slideMenu {
+.services__title::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 40px;
+    background-color: #41F6D7;
+    margin-right: 12px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    vertical-align: middle;
+}
+
+.services__actions {
+    display: none;
+}
+
+.navigation {
     display: flex;
     flex-wrap: nowrap;
     overflow: scroll;
@@ -113,7 +126,7 @@ main {
     margin-bottom: 24px;
 }
 
-.slideMenu__btn {
+.navigation__item {
     height: 40px;
     background-color: #F8F8F8;
     border: none;
@@ -127,7 +140,7 @@ main {
     padding-right: 16px;
 }
 
-.slideMenu__btn:first-child {
+.navigation__item--activ {
     background-color: #fff;
     border: 2px solid #B8FFEC;
     border-radius: 6px;
@@ -145,32 +158,35 @@ main {
     margin-bottom: 16px;
 }
 
-.aboutUs__text--768 {
+.aboutUs__text--stage1 {
     display: none;
 }
 
-.aboutUs__text--1120 {
+.aboutUs__text--stage2 {
     display: none;
 }
 
 .readMore {
-    display: flex;
-}
-
-.readMore__rows {
-    margin-left: 24px;
-    margin-right: 16px;
-    display: flex;
-    align-items: center;
-}
-
-.readMore__text {
+    background-color: inherit;
+    border: none;
     font-family: "TT Lakes", Arial, sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     color: #1B1C21;
     text-decoration: none;
+    padding: 0;
+    margin-left: 24px;
+}
+
+.readMore::before {
+    content: "";
+    display: inline-block;
+    background-image: url(assets/images/rows.svg);
+    background-repeat: no-repeat;
+    height: 12px;
+    width: 8px;
+    margin-right: 16px;
 }
 
 .cps_img {
@@ -181,50 +197,49 @@ main {
 }
 
 @media  screen and (min-width: 768px) {
-    .headerWrap {
-        display: none;
-    }
 
-    .headerWrap--768 {
-        height: 89px;
-        background-color: #fff;
-        border-bottom: 1px solid #D9FFF5;
-        display: flex;
-        flex-wrap: nowrap;
-    }
-
-    .headerWrap__left {
-        width: 30%;
-        display: flex;
+    .header {
         justify-content: start;
-        align-items: center;
     }
 
-    .headerWrap__burger {
-        margin-left: 24px;
-    }
-
-    .headerWrap__divider {
-        margin-left: 4px;
-        margin-right: 20px;
-    }
-
-    .btnIcon {
+    .header__call, .header__chat, .header__profile {
+        display: block;
         margin-right: 16px;
     }
 
-    .headerWrap__serch {
+    .header__burger {
+        margin-left: 24px;
+        display: flex;
+        align-items: center;
+    }
+
+    .header__burger::after {
+        content: "";
+        display: block;
+        height: 32px;
+        width: 2px;
+        border-radius: 1px;
+        background: #EAEAEA;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .header__serch {
         margin-right: 24px;
     }
 
-    .headerWrap__right {
-        width: 70%;
+    .header__actions {
+        margin-left: auto;
         display: flex;
         justify-content: end;
         align-items: center;
     }
 
-    .slideMenu {
+    .services__title::before {
+        margin-right: 20px;
+    }
+
+    .navigation {
         margin-top: 32px;
         margin-bottom: 40px;
         margin-left: 24px;
@@ -238,11 +253,11 @@ main {
         margin-right: 48px;
     }
 
-    .aboutUs__text--768 {
+    .aboutUs__text--stage1 {
         display: inline;
     }
 
-    .readMore__rows {
+    .readMore {
         margin-left: 9px;
     }
 
@@ -261,29 +276,29 @@ main {
 }
 
 @media  screen and (min-width: 1120px) {
-    .headerWrap--768 {
+    .header {
         display: none;
     }
 
-    .titleWrap {
+    .main__services {
         display: flex;
         justify-content: space-between;
         padding-top: 42px;
     }
 
-    .title {
+    .services__title {
         padding: 0;
     }
 
-    .title__line {
+    .services__title::before {
         margin-right: 30px;
     }
 
-    .titleWrap__right {
+    .services__actions {
         display: flex;
     }
 
-    .titleWrap__btn {
+    .services__btn {
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
@@ -310,7 +325,7 @@ main {
         margin: 0;
     }
 
-    .slideMenu {
+    .navigation {
         flex-wrap: wrap;
         margin-top: 8px;
         margin-left: 32px;
@@ -329,7 +344,7 @@ main {
         margin-top: 9px;
     }
 
-    .aboutUs__text--1120 {
+    .aboutUs__text--stage2 {
          display: inline;
     }
 

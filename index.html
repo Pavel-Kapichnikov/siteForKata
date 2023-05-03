@@ -8,96 +8,70 @@
     <title>CPS - Главная</title>
 </head>
 <body>
-    <header>
-        <div class="headerWrap">
-                <button class="headerWrap__burger btnIcon">
-                    <img src="images/burger.svg" alt="Меню">
-                </button>
-                <button class="headerWrap__logo btnLogo">
-                    <img src="images/CPS_logo.svg" alt="logo_CPS" width="96">
-                </button>
-                <div class="headerWrap__divider"></div>
-                <button class="headerWrap__instrumenal btnIcon">
-                    <img src="images/instrumental.svg" alt="Оставить заявку">
-                </button>
-                <button class="headerWrap__serch btnIcon">
-                    <img src="images/serch.svg" alt="Статус ремонта">
-                </button>
+    <header class="header">
+        <div class="header__burger">
+            <button class="btnIcon">
+                <img src="assets/images/burger.svg" alt="Меню">
+            </button>
         </div>
-        <div class="headerWrap--768">
-            <div class="headerWrap__left">
-                <button class="headerWrap__burger btnIcon">
-                    <img src="images/burger.svg" alt="menu">
-                </button>
-                <div class="headerWrap__divider"></div>
-                <button class="headerWrap__logo btnLogo">
-                    <img src="images/CPS_logo.svg" alt="logo_CPS" width="96">
-                </button>
-            </div>
-            <div class="headerWrap__right">
-                <button class="headerWrap__call btnIcon">
-                    <img src="images/call.svg" alt="Заказать звонок">
-                </button>
-                <button class="headerWrap__chat btnIcon">
-                    <img src="images/chat.svg" alt="Написать нам">
-                </button>
-                <button class="headerWrap__profile btnIcon">
-                    <img src="images/profile.svg" alt="Профиль">
-                </button>
-                <div class="headerWrap__divider"></div>
-                <button class="headerWrap__instrumenal btnIcon">
-                    <img src="images/instrumental.svg" alt="Оставить заявку">
-                </button>
-                <button class="headerWrap__serch btnIcon">
-                    <img src="images/serch.svg" alt="Статус ремонта">
-                </button>
-            </div>
-        </div>
+        <a href="#" class="header__logo">
+            <img src="assets/images/CPS_logo.svg" alt="logo_CPS" width="96">
+        </a>
+        <ul class="header__actions">
+            <li class="header__call"><button class="btnIcon">
+                <img src="assets/images/call.svg" alt="Заказать звонок">
+            </button></li>
+            <li class="header__chat"><button class="btnIcon">
+                <img src="assets/images/chat.svg" alt="Написать нам">
+            </button></li>
+            <li class="header__profile"><button class="btnIcon">
+                <img src="assets/images/profile.svg" alt="Профиль">
+            </button></li>
+            <li class="header__instrumenal"><button class="btnIcon">
+                <img src="assets/images/instrumental.svg" alt="Оставить заявку">
+            </button></li>
+            <li class="header__serch"><button class="btnIcon">
+                <img src="assets/images/serch.svg" alt="Статус ремонта">
+            </button></li>
+        </ul>
     </header>
-    <main>
-        <div class="titleWrap">
-            <div class="title titleWrap__left">
-                <div class="title__line"></div>
-                <h1 class="title__text">Услуги и сервисы</h1>
-            </div>
-            <div class="titleWrap__right">
-                <button class="titleWrap__btn">
+    <main class="main">
+        <div class="main__services services">
+            <h1 class="services__title">Услуги и сервисы</h1>
+            <div class="services__actions">
+                <button class="services__btn">
                     <div class="btnText">Оставить заявку</div>
                     <div class="btnIcon">
-                        <img src="images/instrumental.svg" alt="Оставить заявку">
+                        <img src="assets/images/instrumental.svg" alt="Оставить заявку">
                     </div>
                 </button>
-                <button class="titleWrap__btn">
+                <button class="services__btn">
                     <div class="btnText">Статус ремонта</div>
                     <div class="btnIcon">
-                        <img src="images/serch.svg" alt="Оставить заявку">
+                        <img src="assets/images/serch.svg" alt="Оставить заявку">
                     </div>
                 </button>
             </div>
         </div>
-        <nav class="slideMenu">
-            <button class="slideMenu__btn">Ремонтируемые устройства</button>
-            <button class="slideMenu__btn">Дополнительные услуги</button>
-            <button class="slideMenu__btn">Цены на услуги</button>
-            <button class="slideMenu__btn">Специальные цены</button>
-            <button class="slideMenu__btn">Ремонтируемые бренды</button>
-            <button class="slideMenu__btn">Адреса сервисных центров</button>
-            <button class="slideMenu__btn">Отзывы</button>
+        <nav class="services__navigation navigation">
+            <button class="navigation__item navigation__item--activ">Ремонтируемые устройства</button>
+            <button class="navigation__item">Дополнительные услуги</button>
+            <button class="navigation__item">Цены на услуги</button>
+            <button class="navigation__item">Специальные цены</button>
+            <button class="navigation__item">Ремонтируемые бренды</button>
+            <button class="navigation__item">Адреса сервисных центров</button>
+            <button class="navigation__item">Отзывы</button>
         </nav>
-        <div class="aboutUs">
+        <section class="aboutUs">
             <div class="aboutUs__wrap">
-                <p class="aboutUs__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.<span class="aboutUs__text--768"><br>
+                <p class="aboutUs__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.<span class="aboutUs__text--stage1"><br>
                     <br>
-                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</span><span class="aboutUs__text--1120">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
-                <div class="readMore">
-                    <div class="readMore__rows">
-                        <img src="images/rows.svg" alt="" height="10">
-                    </div>
-                    <a href="#" class="readMore__text">Читать далее</a>
-                </div>
+                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</span><span class="aboutUs__text--stage2">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span>
+                </p>
+                <button class="readMore">Читать далее</button>
             </div>
-            <img class="cps_img" src="images/CPS_img.jpg" alt="Вывеска компании">
-        </div>
+            <img class="cps_img" src="assets/images/CPS_img.jpg" alt="Вывеска компании">
+        </section>
     </main>
 </body>
 </html>
