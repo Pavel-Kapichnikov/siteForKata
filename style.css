@@ -97,10 +97,6 @@ html, body {
         padding-left: 24px;
     }
 
-    .supported-brands__title > br {
-        display: none;
-    }
-
     .supported-brands__cards {
         height: auto;
     }
@@ -113,11 +109,18 @@ html, body {
         margin-left: auto;
         margin-right: auto;
         overflow: hidden;
+        transition: height 0.5s ease;
 
         display: grid;
         grid-template-columns: repeat(3, 224px);
         column-gap: 24px;
         row-gap: 16px;
+    }
+
+    .supported-brands__list--activ {
+        height: auto;
+        margin-bottom: 46px;
+        transition: height 0.5s ease;
     }
 
     .supported-brands__item {
@@ -137,6 +140,8 @@ html, body {
         text-decoration: none;
         padding: 0;
         margin-bottom: 34px;
+        margin-left: 39px;
+        cursor: pointer;
     }
 
     .readMore::before {
@@ -147,7 +152,6 @@ html, body {
         height: 12px;
         width: 8px;
         margin-right: 16px;
-        margin-left: 39px;
     }
 
     .readMore--activ {
@@ -162,7 +166,6 @@ html, body {
         height: 12px;
         width: 8px;
         margin-right: 16px;
-        margin-left: 39px;
         transform: rotate(180deg);
     }
 }
